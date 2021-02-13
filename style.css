@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+--paleviolet: hsl(276, 100%, 81%);
+--LightViolet: hsl(264, 100%, 61%);
+--LightMagenta: hsl(293, 100%, 63%);
+}
+
+html {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: hsl(271, 36%, 24%);
+  font-weight: 700;
+}
+p {
+  color: hsl(270, 7%, 64%);
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 100vh;
+  background-color: hsl(270, 20%, 96%);
+}
+.suspended-box {
+  height: 90%;
+  background: linear-gradient(to bottom, var(--LightMagenta), var(--LightViolet));
+  border-radius: 0 0 50% 50% / 0 0 30% 20%;
+  margin-left: -20px;
+}
+.phone {
+  width: 370px;
+  height: 650px;
+  border-radius: 25px;
+  border: solid 10px hsl(0, 0%, 100%);
+  background-color: hsl(270, 20%, 96%);
+  font-size: 10px;
+  margin: 5vh 0 0 -90px;
+  box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.4);
+
+}
+.w-box {
+  width: 60%;
+  height: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  position: relative;
+  top: -20px;
+  left:20%;
+}
+.header {
+  padding: 16px;
+  background: linear-gradient(to right, var(--LightViolet), var(--LightMagenta));
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+}
+h3 {
+  font-weight: normal;
+}
+.chevron, .photo {
+  float: left;
+}
+.chevron {
+  margin: 8px 10px 0 10px;
+}
+.photo {
+  border-radius: 50%;
+  border: solid 1px hsl(0, 0%, 100%);
+  width: 30px;
+  margin-right: 16px;
+}
+small {
+  color: hsl(276, 100%, 81%);
+}
+.ellipsis {
+  position: relative;
+  left:150px;
+  bottom: 8px;
+}
+dt {
+  background-color: #e7d9ea;
+  width: 200px;
+  border-radius: 12px;
+  margin: 8px;
+  padding: 8px;
+  color: hsl(276, 55%, 52%);
+  line-height: 1.5;
+}
+dd {
+  background-color: hsl(0, 0%, 100%);
+  width: max-content;
+  border-radius: 12px;
+  border-bottom-right-radius: 6px;
+  margin: 8px 0 8px 186px;
+  padding: 8px;
+  color: hsl(271, 15%, 43%);
+  line-height: 1.5;
+  box-shadow: 3px 3px 6px #666666;
+}
+.dog {
+  border-radius: 8px;
+  width: 60px;
+  margin:5px;
+}
+.dog1 {
+  margin-left: 135px;
+}
+.further {
+  margin-left: 245px;
+}
+button {
+  width:70%;
+  background: linear-gradient(to right, var(--LightMagenta), var(--LightViolet));
+  border-radius: 12px;
+  border-bottom-left-radius: 6px;
+  padding: 12px;
+  color: white;
+  margin: 0 0 8px 8px;
+  text-align: left;
+  color: hsl(276, 100%, 81%);
+}
+.fa-circle {
+  color: hsl(289, 100%, 72%);
+}
+.price {
+ margin-left: 80px;
+ font-size: 16px;
+ color: hsl(0, 0%, 100%);
+}
+.price1 {
+ margin-left: 100px;
+}
+input {
+  width:90%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  padding: 16px;
+  border-style: none;
+  color: grey;
+  opacity: 0.5;
+  margin: 8px 0 0 8px;
+}
+.last-icon {
+position: relative;
+left: 280px;
+bottom: 38px;
+color: hsl(271, 36%, 24%);
+}
+.message {
+  line-height: 2;
+  margin: 0 -100px 0 30px;
+  z-index: 1;
+  align-self: center;
+}
+.box {
+  height: 90%;
+  border-radius: 70% 30% 0 0 / 30% 2% 0 0;
+  background: #e7d9ea;
+  position: relative;
+  top: 10%;
+  opacity: 0.2;
+}
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 40vw;
+  }
+  .attribution a { color: hsl(228, 45%, 44%); }
+
+  @media (max-width:1000px) {
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 800px 250px;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    padding: 0 16px;
+  }
+  .suspended-box {
+    position: absolute;
+    width:45vw;
+  }
+  .phone {
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    z-index: 1;
+  }
+  .message {
+    grid-column: span 2;
+    width: auto;
+    text-align: center;
+    margin: 0;
+    align-self: center;
+  }
+  .box {
+    position: absolute;
+    left:60vw;
+    bottom: -182px;
+    width:40vw;
+    top: unset;
+  }
+  .attribution {
+    left: 35%;
+    bottom: -170px;
+  }
+  }
+@media (max-width:600px) {
+  .attribution {
+    left: 25%;
+}
